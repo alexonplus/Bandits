@@ -30,6 +30,63 @@
   <p>© 2026 Hoodie Shop</p>
 </footer>
 
+  <!--
+<style>
+
+    #joke {
+        background-color: #f5f5f5;
+        border-left: 4px solid #4caf50;
+        padding: 1rem;
+        margin-top: 1.5rem;
+        max-width: 400px;
+        font-style: italic;
+    }
+
+    button {
+        margin-top: 0.75rem;
+        padding: 0.5rem 1rem;
+        cursor: pointer;
+    }
+
+</style>
+-->
+
+<button onclick="loadJoke()">Get a new joke</button>
+
+<p id="joke"></p>
+<script>
+  // Hämta paragrafen där skämtet ska visas
+  const jokeElement = document.getElementById("joke");
+
+  // Funktion som hämtar ett nytt skämt
+  function loadJoke() {
+    // Visa laddningstext medan vi väntar
+    jokeElement.textContent = "Laddar skämt...";
+
+    // Anropa API:et för att få ett slumpmässigt skämt
+    fetch("https://official-joke-api.appspot.com/random_joke")
+      .then(function (response) {
+        // Gör om svaret till JSON
+        return response.json();
+      })
+      .then(function (joke) {
+        // Visa skämtet på sidan
+        jokeElement.textContent =
+          joke.setup + " — " + joke.punchline;
+      })
+      .catch(function () {
+        // Om något går fel, visa ett felmeddelande
+        jokeElement.textContent =
+          "Kunde inte ladda skämt 😢";
+      });
+  }
+
+  // Ladda ett skämt automatiskt när sidan öppnas
+  loadJoke();
+</script>
+
+
+  
 </body>
 </html>
 
