@@ -1,48 +1,79 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="ru">
+
 <head>
     <meta charset="UTF-8">
-    <title>Hoodie Shop | Home</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BANDITS | Магазин худи</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;700&display=swap" rel="stylesheet">
 </head>
-<body bgcolor="#f0f0f0"> <table width="100%" border="0">
-        <tr>
-            <td align="center">
-                <img src="images/imagindex.jpg" alt="NBI Logo" width="300">
-                <h1>Hoodie Shop</h1>
-                <p><i>NBI hoodie merch — Best hoodies for developers</i></p>
-            </td>
-        </tr>
-    </table>
 
-    <hr size="2" color="black"> <p align="center">
-        <a href="index.html"><b>Home</b></a> |
-        <a href="checkout.html">Products</a> |
+<body>
+
+    <nav class="navbar">
+        <div class="logo">BANDITS</div>
+        <a href="index.html">Home</a> |
+        <a href="checkout.html">Checkout</a> |
         <a href="product.html">Product</a> |
         <a href="about.html">About</a> |
         <a href="contact.html">Contact</a>
-    </p>
+        <div class="cart-icon" onclick="toggleCart()">
+            Items (<span id="cart-count">0</span>)
+        </div>
+    </nav>
 
-    <hr size="1" color="gray">
+    <header class="hero">
+        <div class="hero-content">
+            <h1>BANDITS WEAR</h1>
+            <p>Комфорт. Качество. Твой стиль.</p>
+            <a href="#products" class="btn-primary">Смотреть коллекцию</a>
+        </div>
+    </header>
 
-    <table width="800" align="center" border="0" cellpadding="20">
-        <tr>
-            <td align="center">
-                <h2>Welcome to our shop! </h2>
-                <p>We create high-quality merch for NBI students. Our hoodies combine style and comfort for those who code day and night.</p>
-                
-               
-                
-                <p><mark>Classic NBI Hoodie 1994</mark></p>
-            </td>
-        </tr>
-    </table>
+    <section id="products" class="products">
+        <h2 class="section-title">Новое поступление</h2>
+        <div class="product-grid">
+            <div class="product-card">
+                <div class="product-image">
+                    <img src="https://images.unsplash.com/photo-1556821840-3a63f95609a7?q=80&w=600" alt="Black Hoodie">
+                </div>
+                <div class="product-info">
+                    <h3>Black Classic</h3>
+                    <p class="price">4 500 ₽</p>
+                    <button class="add-to-cart" onclick="addToCart('Black Classic')">В корзину</button>
+                </div>
+            </div>
+            <div class="product-card">
+                <div class="product-image">
+                    <img src="https://images.unsplash.com/photo-1578587018452-892bacefd3f2?q=80&w=600"
+                        alt="Gray Hoodie">
+                </div>
+                <div class="product-info">
+                    <h3>Street Gray</h3>
+                    <p class="price">4 900 ₽</p>
+                    <button class="add-to-cart" onclick="addToCart('Street Gray')">В корзину</button>
+                </div>
+            </div>
+            <div class="product-card">
+                <div class="product-image">
+                    <img src="https://images.unsplash.com/photo-1620799140408-edc6dcb6d633?q=80&w=600"
+                        alt="White Hoodie">
+                </div>
+                <div class="product-info">
+                    <h3>Urban White</h3>
+                    <p class="price">5 200 ₽</p>
+                    <button class="add-to-cart" onclick="addToCart('Urban White')">В корзину</button>
+                </div>
+            </div>
+        </div>
+    </section>
 
-    <br><br>
+    <footer>
+        <p>&copy; 2024 BANDITS. Все права защищены.</p>
+    </footer>
 
-    <hr size="2" color="black">
-    <p align="center">
-        <small>© 2026 Hoodie Shop | NBI Handelsakademin</small>
-    </p>
-
+    <script src="script.js"></script>
 </body>
+
 </html>
