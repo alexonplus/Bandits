@@ -235,3 +235,21 @@ footer {
     cursor: pointer;
     transition: background-color 0.3s ease;
 }
+.mini-card img {
+    width: 100%;
+    border-radius: 6px;
+    margin-bottom: 10px;
+}
+
+.mini-info h3 {
+    font-size: 0.9rem;
+    margin: 0 0 5px 0;
+    color: #333;
+}
+
+.mini-info p {
+    font-size: 0.75rem; 
+    color: #666;
+    margin: 0;
+    line-height: 1.4;
+}
