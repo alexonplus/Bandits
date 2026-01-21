@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="sv">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Jokes</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+  <nav class="navbar">
+    <div class="logo">BANDITS</div>
+    <a href="index.html">Home</a>
+  </nav>
+
+  <main style="padding: 2rem;">
+    <h1>Random joke</h1>
+    <button onclick="loadJoke()">Get a new joke</button>
+    <p id="joke"></p>
+  </main>
+
+  <script>
+    const jokeElement = document.getElementById("joke");
+
+    function loadJoke() {
+      jokeElement.textContent = "Laddar skämt...";
+
+      fetch("https://official-joke-api.appspot.com/random_joke")
+        .then(r => r.json())
+        .then(joke => {
+          jokeElement.textContent = joke.setup + " — " + joke.punchline;
+        })
+        .catch(() => {
+          jokeElement.textContent = "Kunde inte ladda skämt 😢";
+        });
+    }
+
+    loadJoke();
+  </script>
+
+</body>
+</html>
