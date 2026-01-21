@@ -1,37 +1,54 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>About</title>
+    <link rel="stylesheet" href="style.css">
+     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;700&display=swap" rel="stylesheet">
 </head>
-<body>
-<h1>About</h1>
-<p>We started as a small group of enthusiasts passionate about comfortable, durable, 
-    high-quality urban hoodies. From the very beginning, we have always chosen to work 
-    with premium materials to ensure the longevity of our garments and the comfort and 
-    satisfaction of our customers.
-</p>
-<p>
-    Our clothing is designed to enhance urban culture, individuality, and freedom 
-    of expression, reflected in every detail. We believe in protecting the environment 
-    and source our materials from manufacturers committed to sustainable practices and 
-    responsible industrial processes.
-</p>
- <a href="https://www.google.com/imghp" target="_blank">
-        <img src="images/BanditsHoodiesColours2.jpg" alt="Large image" width="300" height="200">
-        <img src="images/BanditsHoodies.jpg" alt="Large image" width="300" height="200">
-        <img src="images/BanditsHoodiesColours.jpg" alt="Colourful hoodies" width="300" height="200">
-        <img src="images/BanditsHoodiesColours3.jpg" alt="Colourful hoodies" width="300" height="200">
-    </a>
-<!-- Links to all 5 pages. -->
-<nav>
-    <a href="index.html">Home</a> |
-    <a href="checkout.html">Products</a> |
-    <a href="product.html">Product</a> |
-    <a href="about.html">About</a> |
-    <a href="contact.html">Contact</a>
-</nav>
-</body>
-</html>
 
+<body>
+    <nav class="navbar">
+        <div class="logo">BANDITS</div>
+        <a href="index.html">Home</a> |
+        <a href="checkout.html">Checkout</a> |
+        <a href="product.html">Product</a> |
+        <a href="about.html">About</a> |
+        <a href="contact.html">Contact</a>
+        <div class="cart-icon" onclick="toggleCart()">
+            Items (<span id="cart-count">0</span>)
+        </div>
+    </nav>
+
+    <h1>ABOUT</h1>
+    <div class="textarea">
+    <p>We started as a small group of enthusiasts passionate about comfortable, durable,
+        high-quality urban hoodies. From the very beginning, we have always chosen to work
+        with premium materials to ensure the longevity of our garments and the comfort and
+        satisfaction of our customers.
+    </p>
+    </div>
+    <div class="textarea">
+    <p>
+        Our clothing is designed to enhance urban culture, individuality, and freedom
+        of expression, reflected in every detail. We believe in protecting the environment
+        and source our materials from manufacturers committed to sustainable practices and
+        responsible industrial processes.
+    </p>
+    </div>
+    <div class="product-grid">
+    <a href="https://www.google.com/imghp">
+        <img src="images/BanditsHoodiesColours2.jpg" alt="Large image">
+        <img src="images/BanditsHoodies.jpg" alt="Large image">
+        <img src="images/BanditsHoodiesColours.jpg" alt="Colourful hoodies">
+        <img src="images/BanditsHoodiesColours3.jpg" alt="Colourful hoodies">
+    
+    </div>
+     <footer>
+        <p>&copy; 2024 BANDITS. Все права защищены.</p>
+    </footer>
+</body>
+
+</html>
