@@ -20,7 +20,7 @@ body {
     scroll-behavior: smooth;
 }
 
-/* Навигация */
+/* navigation */
 .navbar {
     display: flex;
     justify-content: space-between;
@@ -61,7 +61,7 @@ body {
     opacity: 0.6;
 }
 
-/* Hero секция */
+/* new area */
 .hero {
     height: 80vh;
     display: flex;
@@ -107,7 +107,7 @@ h1 {
     box-shadow: 0 10px 20px rgba(0,0,0,0.1);
 }
 
-/* Каталог */
+/* catalog */
 .products {
     padding: 50px 5%;
 }
