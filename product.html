@@ -23,10 +23,41 @@
     </nav>
     
     <h1>Product</h1>
-    <p>Welcome to this page (Product)</p>
-    <a href="https://www.google.com/imghp" target="_blank">
-        <img src="images/image3.jpg" alt="Small image" width="150" height="150">
-    </a>
+    <p>Hoodie captions from the world's best comedians</p>
+    
+    <button class="jokebut" onclick="loadJoke()">Get a new joke</button>
+
+<p id="joke"></p>
+<script>
+  // Hämta paragrafen där skämtet ska visas
+  const jokeElement = document.getElementById("joke");
+
+  // Funktion som hämtar ett nytt skämt
+  function loadJoke() {
+    // Visa laddningstext medan vi väntar
+    jokeElement.textContent = "Laddar skämt...";
+
+    // Anropa API:et för att få ett slumpmässigt skämt
+    fetch("https://official-joke-api.appspot.com/random_joke")
+      .then(function (response) {
+        // Gör om svaret till JSON
+        return response.json();
+      })
+      .then(function (joke) {
+        // Visa skämtet på sidan
+        jokeElement.textContent =
+          joke.setup + " — " + joke.punchline;
+      })
+      .catch(function () {
+        // Om något går fel, visa ett felmeddelande
+        jokeElement.textContent =
+          "Kunde inte ladda skämt 😢";
+      });
+  }
+
+  // Ladda ett skämt automatiskt när sidan öppnas
+  loadJoke();
+</script>
 
      <footer>
         <p>&copy; © 2024 BANDITS. All rights reserved.</p>
