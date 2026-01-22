@@ -1,24 +1,53 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Contact</title>
-</head>
-<body>
-<h1>Contact</h1>
-<p>Welcome to this page (Contact)</p>
-<a href="https://www.google.com/imghp" target="_blank">
-    <img src="images/image5.jpg" alt="Small image" width="150" height="150">
-</a>
-<!-- Links to all 5 pages. -->
-<nav>
-    <a href="index.html">Home</a> |
-    <a href="checkout.html">Products</a> |
-    <a href="product.html">Product</a> |
-    <a href="about.html">About</a> |
-    <a href="contact.html">Contact</a>
-</nav>
-</body>
-</html>
 
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Contact</title>
+  <link rel="stylesheet" href="style.css">
+ <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;700&display=swap" rel="stylesheet">
+</head>
+
+<body>
+
+    <nav class="navbar">
+        <div class="logo">BANDITS</div>
+        <a href="index.html">Home</a> |
+        <a href="checkout.html">Checkout</a> |
+        <a href="product.html">Product</a> |
+        <a href="about.html">About</a> |
+        <a href="contact.html">Contact</a>
+        <div class="cart-icon" onclick="toggleCart()">
+            Items (<span id="cart-count">0</span>)
+        </div>
+    </nav>
+
+  <h1>Contact Us</h1>
+
+
+
+  <p>Please fill out the form with information.<br>
+    Add an short description of what you need help with.
+  </p>
+
+ <div class="form-container">
+  <form class="contact-form">
+    <h2>Contact Us</h2>
+
+    <input type="text" placeholder="Name" required>
+    <input type="email" placeholder="Email" required>
+    <textarea placeholder="Message" rows="5" required></textarea>
+
+    <button class="btn-primary" type="submit">Send</button>
+  </form>
+</div>
+
+  <p>Your message will be send to test.info@gmail.com and we will probabaly never get back to you! </p>
+
+   <footer>
+        <p>&copy;© 2024 BANDITS. All rights reserved.</p>
+    </footer>
+</body>
+
+</html>

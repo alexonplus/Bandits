@@ -1,24 +1,79 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Home</title>
+    <title>BANDITS  Hoodie Store</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;700&display=swap" rel="stylesheet">
 </head>
-<body>
-<h1>Home</h1>
-<p>Welcome to this page (Home)</p>
-<a href="https://www.google.com/imghp" target="_blank">
-    <img src="images/image1.jpg" alt="Small image" width="150" height="150">
-</a>
-<!-- Links to all 5 pages. -->
-<nav>
-    <a href="index.html">Home</a> |
-    <a href="checkout.html">Products</a> |
-    <a href="product.html">Product</a> |
-    <a href="about.html">About</a> |
-    <a href="contact.html">Contact</a>
-</nav>
-</body>
-</html>
 
+<body>
+
+    <nav class="navbar">
+        <div class="logo">BANDITS</div>
+        <a href="index.html">Home</a> |
+        <a href="checkout.html">Checkout</a> |
+        <a href="product.html">Product</a> |
+        <a href="about.html">About</a> |
+        <a href="contact.html">Contact</a>
+        <div class="cart-icon" onclick="toggleCart()">
+            Items (<span id="cart-count">0</span>)
+        </div>
+    </nav>
+
+    <header class="hero">
+        <div class="hero-content">
+            <h1>BANDITS WEAR</h1>
+            <p>Comfort. Quality. Your style.</p>
+            <a href="#products" class="btn-primary">View collection</a>
+        </div>
+    </header>
+
+    <section id="products" class="products">
+        <h2 class="section-title">New arrivals</h2>
+        <div class="product-grid">
+            <div class="product-card">
+                <div class="product-image">
+                    <img src="https://images.unsplash.com/photo-1556821840-3a63f95609a7?q=80&w=600" alt="Black Hoodie">
+                </div>
+                <div class="product-info">
+                    <h3>Classic Grey</h3>
+                    <p class="price">4 500 ₽</p>
+                    <button class="add-to-cart" onclick="addToCart('Classic Grey')">Add to cart</button>
+                </div>
+            </div>
+            <div class="product-card">
+                <div class="product-image">
+                    <img src="https://images.unsplash.com/photo-1578587018452-892bacefd3f2?q=80&w=600"
+                        alt="Gray Hoodie">
+                </div>
+                <div class="product-info">
+                    <h3>Fire orange</h3>
+                    <p class="price">4 900 ₽</p>
+                    <button class="add-to-cart" onclick="addToCart('Fire orange')">Add to cart</button>
+                </div>
+            </div>
+            <div class="product-card">
+                <div class="product-image">
+                    <img src="https://images.unsplash.com/photo-1620799140408-edc6dcb6d633?q=80&w=600"
+                        alt="White Hoodie">
+                </div>
+                <div class="product-info">
+                    <h3>Urban White</h3>
+                    <p class="price">5 200 ₽</p>
+                    <button class="add-to-cart" onclick="addToCart('Urban White')">Add to cart</button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <p>&copy; © 2024 BANDITS. All rights reserved.</p>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+
+</html>

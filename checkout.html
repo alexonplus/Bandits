@@ -4,21 +4,52 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Products</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;700&display=swap" rel="stylesheet">
 </head>
 <body>
-<h1>Products</h1>
-<p>Welcome to this page (Products)</p>
+    <nav class="navbar">
+        <div class="logo">BANDITS</div>
+        <a href="index.html">Home</a> |
+        <a href="checkout.html">Checkout</a> |
+        <a href="product.html">Product</a> |
+        <a href="about.html">About</a> |
+        <a href="contact.html">Contact</a>
+        <div class="cart-icon" onclick="toggleCart()">
+            Items (<span id="cart-count">0</span>)
+        </div>
+    </nav>
+    
+<h1>Checkout</h1>
 <a href="https://www.google.com/imghp" target="_blank">
-    <img src="images/image2.jpg" alt="Small image" width="150" height="150">
+    <img src="images/PaymentImg.jpg" alt="Small image" width="150" height="150">
 </a>
-<!-- Links to all 5 pages. -->
-<nav>
-    <a href="index.html">Home</a> |
-    <a href="checkout.html">Products</a> |
-    <a href="product.html">Product</a> |
-    <a href="about.html">About</a> |
-    <a href="contact.html">Contact</a>
-</nav>
+
+<div>
+    <img src="images/HoodieBandits.jpg" alt="Small image" width="150" height="150">
+    <h4>Hoodie - merch Handelsakademin</h4>
+    <p>Price: 500 SEK</p>
+    <p>Color: Black</p>
+    <p>Size: M</p>
+    <p>Quantity: 2</p>
+</div>
+
+<div>
+    <img src="images/HoodieBandits.jpg" alt="Small image" width="150" height="150">
+    <h4>Hoodie - merch Handelsakademin</h4>
+    <p>Price: 500 SEK</p>
+    <p>Color: Black</p>
+    <p>Size: S</p>
+    <p>Quantity: 1</p>
+</div>
+<div>
+    <p>Cart: 3</p>
+    <h4>Total Price: 1500 SEK</h4>
+    <button class="btn-primary">Place order</button>
+</div>
+ <footer>
+        <p>&copy; © 2024 BANDITS. All rights reserved.</p>
+    </footer>
 </body>
 </html>
 

@@ -1,24 +1,69 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Product</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;700&display=swap" rel="stylesheet">
 </head>
-<body>
-<h1>Product</h1>
-<p>Welcome to this page (Product)</p>
-<a href="https://www.google.com/imghp" target="_blank">
-    <img src="images/image3.jpg" alt="Small image" width="150" height="150">
-</a>
-<!-- Links to all 5 pages. -->
-<nav>
-    <a href="index.html">Home</a> |
-    <a href="checkout.html">Products</a> |
-    <a href="product.html">Product</a> |
-    <a href="about.html">About</a> |
-    <a href="contact.html">Contact</a>
-</nav>
-</body>
-</html>
 
+<body>
+    <nav class="navbar">
+        <div class="logo">BANDITS</div>
+        <a href="index.html">Home</a> |
+        <a href="checkout.html">Checkout</a> |
+        <a href="product.html">Product</a> |
+        <a href="about.html">About</a> |
+        <a href="contact.html">Contact</a>
+        <div class="cart-icon" onclick="toggleCart()">
+            Items (<span id="cart-count">0</span>)
+        </div>
+    </nav>
+    
+    <h1>Product</h1>
+    <p>nbi-handelsakademin hoodie</p>
+    <p>Hoodie captions from the world's best comedians</p>
+    <img src="images/imagindex.jpg" alt="Hoodie Bandits" style="display: block; margin: 0 auto;" width="300" height="400"> 
+    <button class="jokebut" onclick="loadJoke()">Get a new joke</button>
+
+<p id="joke"></p>
+<script>
+  // Hämta paragrafen där skämtet ska visas
+  const jokeElement = document.getElementById("joke");
+
+  // Funktion som hämtar ett nytt skämt
+  function loadJoke() {
+    // Visa laddningstext medan vi väntar
+    jokeElement.textContent = "Laddar skämt...";
+
+    // Anropa API:et för att få ett slumpmässigt skämt
+    fetch("https://official-joke-api.appspot.com/random_joke")
+      .then(function (response) {
+        // Gör om svaret till JSON
+        return response.json();
+      })
+      .then(function (joke) {
+        // Visa skämtet på sidan
+        jokeElement.textContent =
+          joke.setup + " — " + joke.punchline;
+      })
+      .catch(function () {
+        // Om något går fel, visa ett felmeddelande
+        jokeElement.textContent =
+          "Kunde inte ladda skämt 😢";
+      });
+  }
+
+  // Ladda ett skämt automatiskt när sidan öppnas
+  loadJoke();
+</script>
+
+     <footer>
+        <p>&copy; © 2024 BANDITS. All rights reserved.</p>
+    </footer>
+</body>
+
+
+</html>
